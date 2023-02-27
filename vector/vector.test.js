@@ -14,7 +14,7 @@ describe('The vector instance', () => {
 
 	test('should return a tail when given x and y coordinates.', () => {
 		const newVector = new Vector(1, 2)
-		expect(newVector.tail).toEqual([1, 2])
+		expect(newVector.tail).toEqual({ x: 1, y: 2 })
 	})
 
 	test('should return length from origin of a given vector.', () => {
@@ -25,7 +25,7 @@ describe('The vector instance', () => {
 	test('should return identity when addend is [0, 0].', () => {
 		const newVector = new Vector(3, 4)
 		const addendVector = new Vector(0, 0)
-		expect(newVector.add(addendVector).tail).toEqual([3, 4])
+		expect(newVector.add(addendVector).tail).toEqual({ x: 3, y: 4 })
 	})
 
 	test('should return sum of two vectors when addend is not [0, 0]. ', () => {
